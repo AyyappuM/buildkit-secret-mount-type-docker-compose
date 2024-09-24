@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  build:
+    image: my-build-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+      secrets:
+        - my_secret
+
+secrets:
+  my_secret:
+      environment: MY_SECRET_ENV
